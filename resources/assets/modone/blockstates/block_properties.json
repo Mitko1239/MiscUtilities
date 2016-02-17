@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "type=white": { "model":"modone:block_properties_white" },
+        "type=black": { "model":"modone:block_properties_black" }
+    }
+}

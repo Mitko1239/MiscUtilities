@@ -1,0 +1,4 @@
+tile.tutorial_block.name=Glowing Bluestone
+tile.block_properties.white.name=White Cobblestone
+tile.block_properties.black.name=Black Cobblestone
+item.tutorial_item.name=Bluestone Dust
