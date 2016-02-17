@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "modone:tutorial_block" }
+    }
+}
