@@ -13,9 +13,6 @@ public class ModCrafting {
 		GameRegistry.addRecipe(new ItemStack(ModBlocks.tutorialBlock), "##", "##", '#', ModItems.tutorialItem);
 		GameRegistry.addRecipe(new ItemStack(ModBlocks.propertyBlock, 8, 0), "###", "#I#", "###", '#', Blocks.cobblestone, 'I', new ItemStack(Items.dye, 1, 15));
 		GameRegistry.addRecipe(new ItemStack(ModBlocks.propertyBlock, 8, 1), "###", "#I#", "###", '#', Blocks.cobblestone, 'I', new ItemStack(Items.dye, 1, 0));
-		// GameRegistry.addShapelessRecipe(new
-		// ItemStack(ModBlocks.tutorialBlock), new Object[] {new
-		// ItemStack(ModItems.tutorialItem, 0, 4)});
 		GameRegistry.addSmelting(Items.diamond, new ItemStack(ModItems.tutorialItem), 1.0F);
 	}
 }
