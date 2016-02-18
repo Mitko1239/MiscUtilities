@@ -1,0 +1,6 @@
+{
+    "parent": item/standard_item",
+    "textures": {
+        "layer0": "modone:blocks/block_properties"
+    }
+}
