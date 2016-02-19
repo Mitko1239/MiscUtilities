@@ -1,6 +1,0 @@
-{
-    "variants": {
-        "type=white": { "model":"modone:meta_item_white" },
-        "type=black": { "model":"modone:meta_item_black" }
-    }
-}

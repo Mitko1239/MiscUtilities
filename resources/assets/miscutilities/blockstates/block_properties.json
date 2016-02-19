@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "type=white": { "model":"miscutilities:block_properties_white" },
+        "type=black": { "model":"miscutilities:block_properties_black" }
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "miscutilities:item/standard_item",
+    "textures": {
+        "layer0": "miscutilities:blocks/block_properties_white"
+    }
+}

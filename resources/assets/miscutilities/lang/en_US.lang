@@ -1,0 +1,22 @@
+#Regular Blocks
+tile.tutorial_block.name=Bluestone
+
+#Blockstates blocks
+tile.block_properties.white.name=White Cobblestone
+tile.block_properties.black.name=Black Cobblestone
+
+#Regular Items
+item.tutorial_item.name=Bluestone Dust
+
+#Metadata Items
+item.meta_item.black.name=Black Meta Item
+item.meta_item.white.name=White Meta Item
+
+#Tools and weapons
+item.tutorial_sword.name=Unnamed Sword
+item.tutorial_pickaxe.name=Unnamed Pickaxe
+item.tutorial_axe.name=Unnamed Axe
+item.tutorial_spade.name=Unnamed Shovel
+item.tutorial_hoe.name=Unnamed Hoe
+
+#Armor
