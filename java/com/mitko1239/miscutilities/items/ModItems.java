@@ -38,7 +38,7 @@ public final class ModItems {
 	public static ItemModArmor tutorialBoots;
 	
 	public static ItemFood tutorialChocolate;
-	private static ItemFood tutorialLuckyCandy;
+	public static ItemFood tutorialLuckyCandy;
 
 
 	public static void createItems() {
@@ -86,9 +86,9 @@ public final class ModItems {
 				new PotionEffect(Potion.regeneration.id, 200, 1))
 				.setAlwaysEdible(), "tutorial_chocolate");
 		
-//		GameRegistry.registerItem(tutorialLuckyCandy = new ItemModAdvancedFood("tutorial_lucky_candy", 1, 0.5f, false)
-//			    .addPotionEffect(new PotionEffect(Potion.regeneration.id, 200, 4), 0.5)
-//			    .addPotionEffect(new PotionEffect(Potion.wither.id, 200, 4), 0.5)
-//			    .setAlwaysEdible(), "tutorial_lucky_candy");
+		GameRegistry.registerItem(tutorialLuckyCandy = new ItemModAdvancedFood("tutorial_lucky_candy", 1, 0.5f, false)
+			    .addPotionEffect(new PotionEffect(Potion.regeneration.id, 200, 4), 0.5)
+			    .addPotionEffect(new PotionEffect(Potion.wither.id, 200, 4), 0.5)
+			    .setAlwaysEdible(), "tutorial_lucky_candy");
 	}
 }

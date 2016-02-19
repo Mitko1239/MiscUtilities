@@ -36,6 +36,7 @@ public final class ItemRenderRegister {
 		reg(ModItems.tutorialBoots);
 		
 		reg(ModItems.tutorialChocolate);
+		reg(ModItems.tutorialLuckyCandy);
 	}
 
 	public static void reg(Item item) {
