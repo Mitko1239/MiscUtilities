@@ -7,6 +7,9 @@ tile.block_properties.black.name=Black Cobblestone
 
 #Regular Items
 item.tutorial_item.name=Bluestone Dust
+item.tutorial_chocolate.name=Chocolate
+item.tutorial_lucky_candy.name=Lucky Candy (nyi)
+
 
 #Metadata Items
 item.meta_item.black.name=Black Meta Item
