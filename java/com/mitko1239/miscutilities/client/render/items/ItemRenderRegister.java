@@ -28,6 +28,14 @@ public final class ItemRenderRegister {
 		reg(ModItems.tutorialPickaxe);
 		reg(ModItems.tutorialSpade);
 		reg(ModItems.tutorialSword);
+		reg(ModItems.tutorialMultitool);
+		
+		reg(ModItems.tutorialHelmet);
+		reg(ModItems.tutorialChestplate);
+		reg(ModItems.tutorialLeggings);
+		reg(ModItems.tutorialBoots);
+		
+		reg(ModItems.tutorialChocolate);
 	}
 
 	public static void reg(Item item) {

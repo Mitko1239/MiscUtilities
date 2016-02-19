@@ -6,9 +6,9 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class MetaItem extends Item {
+public class ItemMeta extends Item {
 	
-	public MetaItem(String unlocalizedName) {
+	public ItemMeta(String unlocalizedName) {
 		super();
 		this.setHasSubtypes(true);
 		this.setUnlocalizedName(unlocalizedName);

@@ -13,10 +13,15 @@ item.meta_item.black.name=Black Meta Item
 item.meta_item.white.name=White Meta Item
 
 #Tools and weapons
-item.tutorial_sword.name=Unnamed Sword
-item.tutorial_pickaxe.name=Unnamed Pickaxe
-item.tutorial_axe.name=Unnamed Axe
-item.tutorial_spade.name=Unnamed Shovel
-item.tutorial_hoe.name=Unnamed Hoe
+item.tutorial_sword.name=Better than Diamond Sword
+item.tutorial_pickaxe.name=Better than Diamond Pickaxe
+item.tutorial_axe.name=Better than Diamond Axe
+item.tutorial_spade.name=Better than Diamond Shovel
+item.tutorial_hoe.name=Better than Diamond Hoe
+item.tutorial_hoe.name=The Multitool
 
 #Armor
+item.tutorial_helmet.name=Better than Diamond Helmet
+item.tutorial_chestplate.name=Better than Diamond Chestplate
+item.tutorial_leggings.name=Better than Diamond Leggings
+item.tutorial_boots.name=Better than Diamond Boots
