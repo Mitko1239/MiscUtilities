@@ -21,6 +21,7 @@ public final class ItemRenderRegister {
 
 	public static void registerItemRenderer() {
 		reg(ModItems.tutorialItem);
+		reg(ModItems.randomEssence);
 		reg(ModItems.metaItem, 0, "meta_item_white");
 		reg(ModItems.metaItem, 1, "meta_item_black");
 		reg(ModItems.tutorialAxe);

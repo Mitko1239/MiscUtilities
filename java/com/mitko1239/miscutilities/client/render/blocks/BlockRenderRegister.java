@@ -22,6 +22,8 @@ public final class BlockRenderRegister {
 
 	public static void registerBlockRenderer() {
 		reg(ModBlocks.tutorialBlock);
+		reg(ModBlocks.bluestoneOre);
+		reg(ModBlocks.randomOre);
 		reg(ModBlocks.propertyBlock, 0, "block_properties_white");
 		reg(ModBlocks.propertyBlock, 1, "block_properties_black");
 	}

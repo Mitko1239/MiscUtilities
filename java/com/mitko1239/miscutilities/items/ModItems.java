@@ -21,6 +21,7 @@ public final class ModItems {
 			modid + ":btd", 50, new int[]{3, 8, 6, 3}, 30);
 
 	public static Item tutorialItem;
+	public static Item randomEssence;
 	
 	public static ItemMeta metaItem;
 
@@ -44,6 +45,7 @@ public final class ModItems {
 	public static void createItems() {
 		GameRegistry.registerItem(tutorialItem = new BasicItem("tutorial_item"),
 				"tutorial_item");
+		GameRegistry.registerItem(randomEssence = new BasicItem("randomEssence"), "randomEssence");
 
 		GameRegistry.registerItem(metaItem = new ItemMeta("meta_item"),
 				"meta_item");
@@ -86,9 +88,12 @@ public final class ModItems {
 				new PotionEffect(Potion.regeneration.id, 200, 1))
 				.setAlwaysEdible(), "tutorial_chocolate");
 		
-		GameRegistry.registerItem(tutorialLuckyCandy = new ItemModAdvancedFood("tutorial_lucky_candy", 1, 0.5f, false)
-			    .addPotionEffect(new PotionEffect(Potion.regeneration.id, 200, 4), 0.5)
-			    .addPotionEffect(new PotionEffect(Potion.wither.id, 200, 4), 0.5)
-			    .setAlwaysEdible(), "tutorial_lucky_candy");
+//		GameRegistry.registerItem(tutorialLuckyCandy = new ItemModAdvancedFood("tutorial_lucky_candy", 1, 0.5f, false)
+//			    .addPotionEffect(new PotionEffect(Potion.regeneration.id, 200, 4), 0.5)
+//			    .addPotionEffect(new PotionEffect(Potion.wither.id, 200, 4), 0.5)
+//			    .setAlwaysEdible(), "tutorial_lucky_candy");
+		
+		GameRegistry.registerItem(tutorialLuckyCandy = new ItemModFood("tutorial_lucky_candy", 1, 0.5f, false)
+				.setAlwaysEdible(), "tutorial_lucky_candy");
 	}
 }

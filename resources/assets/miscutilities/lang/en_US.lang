@@ -1,5 +1,7 @@
 #Regular Blocks
 tile.tutorial_block.name=Bluestone
+tile.bluestoneOre.name=Bluestone Ore
+tile.randomOre.name=Random Ore
 
 #Blockstates blocks
 tile.block_properties.white.name=White Cobblestone
@@ -7,8 +9,9 @@ tile.block_properties.black.name=Black Cobblestone
 
 #Regular Items
 item.tutorial_item.name=Bluestone Dust
+item.tutorial_item.name=Random Essence (texture is wip)
 item.tutorial_chocolate.name=Chocolate
-item.tutorial_lucky_candy.name=Lucky Candy (nyi)
+item.tutorial_lucky_candy.name=Lucky Candy
 
 
 #Metadata Items
@@ -21,7 +24,7 @@ item.tutorial_pickaxe.name=Better than Diamond Pickaxe
 item.tutorial_axe.name=Better than Diamond Axe
 item.tutorial_spade.name=Better than Diamond Shovel
 item.tutorial_hoe.name=Better than Diamond Hoe
-item.tutorial_hoe.name=The Multitool
+item.tutorial_multitool.name=The Multitool
 
 #Armor
 item.tutorial_helmet.name=Better than Diamond Helmet
