@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "color=white": { "model":"miscutilities:colored_cobblestone_white" },
+        "color=black": { "model":"miscutilities:colored_cobblestone_black" }
+    }
+}

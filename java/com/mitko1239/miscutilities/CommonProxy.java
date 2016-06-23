@@ -13,7 +13,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class CommonProxy {
 	public void preInit(FMLPreInitializationEvent e) {
 		ModItems.createItems();
-		ModBlocks.createBlocks();
+		ModBlocks.registerBlocks();
 	}
 	
 	public void init(FMLInitializationEvent e) {

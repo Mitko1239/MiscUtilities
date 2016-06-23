@@ -4,15 +4,22 @@ tile.bluestoneOre.name=Bluestone Ore
 tile.randomOre.name=Random Ore
 
 #Blockstates blocks
-tile.block_properties.white.name=White Cobblestone
-tile.block_properties.black.name=Black Cobblestone
+tile.colored_cobblestone.white.name=White Cobblestone
+tile.colored_cobblestone.black.name=Black Cobblestone
 
 #Regular Items
-item.tutorial_item.name=Bluestone Dust
-item.tutorial_item.name=Random Essence (texture is wip)
-item.tutorial_chocolate.name=Chocolate
-item.tutorial_lucky_candy.name=Lucky Candy
+item.bluestone.name=Bluestone Dust
+item.randomEssence.name=Random Essence (texture is wip)
+item.chocolate.name=Chocolate
+item.lucky_candy.name=Lucky Candy
+item.magnet.name=Item Magnet
 
+item.chocolate_milk.name=Chocolate Milk
+item.chocolate_cake.name=Chocolate Cake
+
+
+#Item group(s)
+itemGroup.miscutilities=Miscellaneous Utilities
 
 #Metadata Items
 item.meta_item.black.name=Black Meta Item
@@ -24,7 +31,9 @@ item.tutorial_pickaxe.name=Better than Diamond Pickaxe
 item.tutorial_axe.name=Better than Diamond Axe
 item.tutorial_spade.name=Better than Diamond Shovel
 item.tutorial_hoe.name=Better than Diamond Hoe
-item.tutorial_multitool.name=The Multitool
+item.multitool.name=The Multitool
+item.dire_hammer.name=Emerald Hammer
+item.dire_hammer.desc=Creates a Direwolf20 sized hole (or tunnel)
 
 #Armor
 item.tutorial_helmet.name=Better than Diamond Helmet

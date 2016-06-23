@@ -4,8 +4,8 @@ import com.mitko1239.miscutilities.Main;
 import com.mitko1239.miscutilities.items.ModItems;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.resources.model.ModelBakery;
-import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.client.renderer.block.model.ModelBakery;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 
@@ -20,8 +20,13 @@ public final class ItemRenderRegister {
 	}
 
 	public static void registerItemRenderer() {
-		reg(ModItems.tutorialItem);
+		reg(ModItems.bluestone);
+		reg(ModItems.magnet);
 		reg(ModItems.randomEssence);
+
+		reg(ModItems.chocolateCake);
+		reg(ModItems.chocolateMilk);
+
 		reg(ModItems.metaItem, 0, "meta_item_white");
 		reg(ModItems.metaItem, 1, "meta_item_black");
 		reg(ModItems.tutorialAxe);
@@ -29,15 +34,17 @@ public final class ItemRenderRegister {
 		reg(ModItems.tutorialPickaxe);
 		reg(ModItems.tutorialSpade);
 		reg(ModItems.tutorialSword);
-		reg(ModItems.tutorialMultitool);
-		
+		reg(ModItems.multitool);
+
+		reg(ModItems.direHammer);
+
 		reg(ModItems.tutorialHelmet);
 		reg(ModItems.tutorialChestplate);
 		reg(ModItems.tutorialLeggings);
 		reg(ModItems.tutorialBoots);
-		
-		reg(ModItems.tutorialChocolate);
-		reg(ModItems.tutorialLuckyCandy);
+
+		reg(ModItems.chocolate);
+		reg(ModItems.luckyCandy);
 	}
 
 	public static void reg(Item item) {

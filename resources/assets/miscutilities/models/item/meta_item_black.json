@@ -1,6 +1,6 @@
 {
-    "parent": "miscutilities:item/standard_item",
+    "parent": "item/generated",
     "textures": {
-        "layer0": "miscutilities:blocks/block_properties_black"
+        "layer0": "miscutilities:blocks/colored_cobblestone_black"
     }
 }

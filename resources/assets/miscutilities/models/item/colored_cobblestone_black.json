@@ -1,5 +1,5 @@
 {
-    "parent":"miscutilities:block/block_properties_black",
+    "parent":"miscutilities:block/colored_cobblestone_black",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],
