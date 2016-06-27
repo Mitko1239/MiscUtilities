@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "variant=rose": { "model":"miscutilities:flower_rose" },
+        "variant=paeonia": { "model":"miscutilities:flower_paeonia" },
+        "variant=cyan": { "model":"miscutilities:flower_cyan" }
+    }
+}

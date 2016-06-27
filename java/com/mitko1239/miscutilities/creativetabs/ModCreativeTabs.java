@@ -16,7 +16,7 @@ public class ModCreativeTabs extends CreativeTabs {
 
     @Override
     public Item getTabIconItem() {
-        return ModItems.bluestone;
+        return ModItems.BLUESTONE_DUST;
     }
 
     @Override

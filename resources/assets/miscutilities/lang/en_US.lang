@@ -1,14 +1,17 @@
 #Regular Blocks
-tile.tutorial_block.name=Bluestone
+tile.bluestone.name=Bluestone
 tile.bluestoneOre.name=Bluestone Ore
 tile.randomOre.name=Random Ore
 
 #Blockstates blocks
 tile.colored_cobblestone.white.name=White Cobblestone
 tile.colored_cobblestone.black.name=Black Cobblestone
+tile.flower.rose.name=Rose
+tile.flower.paeonia.name=Paeonia
+tile.flower.cyan.name=Cyan Rose
 
 #Regular Items
-item.bluestone.name=Bluestone Dust
+item.bluestone_dust.name=Bluestone Dust
 item.randomEssence.name=Random Essence (texture is wip)
 item.chocolate.name=Chocolate
 item.lucky_candy.name=Lucky Candy

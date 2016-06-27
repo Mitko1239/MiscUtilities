@@ -1,0 +1,6 @@
+{
+    "parent": "miscutilities:block/cross",
+    "textures": {
+        "cross": "blocks/flower_paeonia"
+    }
+}

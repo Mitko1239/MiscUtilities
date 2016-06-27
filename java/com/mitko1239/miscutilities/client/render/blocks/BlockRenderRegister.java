@@ -17,21 +17,30 @@ public final class BlockRenderRegister {
 	public static String modid = Main.MODID;
 
 	public static void preInit() {
-        final String colors[] = {"black","white"};
+        final String colors[] = {"black", "white"};
         ResourceLocation[] resLoc = new ResourceLocation[2];
         for (int i=0; i < 2; i++)
             resLoc[i] = new ResourceLocation(modid + ":colored_cobblestone_" + colors[i]);
-        try {
+
             ModelBakery.registerItemVariants(Item.getItemFromBlock(ModBlocks.COLORED_COBBLESTONE), resLoc);
-        } catch (NullPointerException e) {
-            System.out.println("AAAAH WHY NO WORK?");
-        }
+
+
+		final String variants[] = {"rose", "paeonia", "cyan"};
+		ResourceLocation[] resLoc2 = new ResourceLocation[3];
+		for (int i=0; i < 3; i++)
+			resLoc2[i] = new ResourceLocation(modid + ":flower_" + variants[i]);
+
+			ModelBakery.registerItemVariants(Item.getItemFromBlock(ModBlocks.FLOWER), resLoc2);
+
 	}
 
 	public static void registerBlockRenderer() {
-		reg(ModBlocks.tutorialBlock);
+		reg(ModBlocks.BLUESTONE);
 		reg(ModBlocks.bluestoneOre);
 		reg(ModBlocks.randomOre);
+		reg(ModBlocks.FLOWER, 0, "flower_rose");
+		reg(ModBlocks.FLOWER, 1, "flower_paeonia");
+		reg(ModBlocks.FLOWER, 2, "flower_cyan");
 		reg(ModBlocks.COLORED_COBBLESTONE, 0, "colored_cobblestone_white");
 		reg(ModBlocks.COLORED_COBBLESTONE, 1, "colored_cobblestone_black");
 	}

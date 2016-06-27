@@ -26,24 +26,17 @@ public final class ModBlocks {
 //	public static Block randomOre;
 
     public static BlockColoredCobblestone COLORED_COBBLESTONE;
-    public static Block tutorialBlock;
+    public static BlockFlower FLOWER;
+    public static Block BLUESTONE;
     public static Block bluestoneOre;
     public static Block randomOre;
 
     static {
-        // THE REAL ONE
-//        GameRegistry.register(propertyBlock = new BlockColoredCobblestone(
-//                "block_prorperties"), new ResourceLocation(modid + ":" + propertyBlock.getUnlocalizedName()));
-
-//        was attached to the registry entry for propertyBlock (the one below)
-//        ItemBlockMeta.class
-
-
-//		GameRegistry.register(propertyBlock = new BlockColoredCobblestone(Material.ROCK), block -> new ItemMultiTexture(block, block, BlockColoredCobblestone.EnumType.getNames());
         COLORED_COBBLESTONE = registerBlock(new BlockColoredCobblestone(Material.ROCK, "colored_cobblestone"), block -> new ItemMultiTexture(block, block, BlockColoredCobblestone.EnumType.getNames()));
+        FLOWER = registerBlock(new BlockFlower(Material.GRASS, "flower"), blockf -> new ItemMultiTexture(blockf, blockf, BlockFlower.EnumType.getNames()));
 
-        tutorialBlock = registerBlock(new BasicBlock("tutorial_block", Material.GLASS, 0.5F, 10.0F, SoundType.GLASS).setLightLevel(1.0f).setRegistryName(modid, "tutorial_block"));
-        bluestoneOre = registerBlock(new ModBlockOre("bluestoneOre", Material.ROCK, ModItems.bluestone, 2, 4).setRegistryName(modid, "bluestoneOre"));
+        BLUESTONE = registerBlock(new BasicBlock(Material.GLASS, 0.5F, 10.0F, SoundType.GLASS, "bluestone").setLightLevel(1.0f));
+        bluestoneOre = registerBlock(new ModBlockOre("bluestoneOre", Material.ROCK, ModItems.BLUESTONE_DUST, 2, 4).setRegistryName(modid, "bluestoneOre"));
         randomOre = registerBlock(new ModBlockMultiOre("randomOre", Material.ROCK).setRegistryName(modid, "randomOre"));
 
 //		GameRegistry.register(tutorialBlock = new BasicBlock(

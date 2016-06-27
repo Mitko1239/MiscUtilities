@@ -29,7 +29,7 @@ public final class ModItems {
     public static ToolMaterial BTD_MT = EnumHelper.addToolMaterial("BTD_M", 3, 781, 15.0F, 3.0F, 22);
 	public static ArmorMaterial BTD_A = EnumHelper.addArmorMaterial("BTD_A", modid + ":btd", 50, new int[]{3, 8, 6, 3}, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F);
 
-	public static Item bluestone;
+	public static Item BLUESTONE_DUST;
 	public static Item magnet;
 	public static Item randomEssence;
 
@@ -62,9 +62,9 @@ public final class ModItems {
 
 	public static void createItems() {
 
-		GameRegistry.register(bluestone = new BasicItem("bluestone").setRegistryName(modid, "bluestone"));
+		GameRegistry.register(BLUESTONE_DUST = new BasicItem("bluestone_dust"));
 		GameRegistry.register(magnet = new ItemMagnet("magnet").setRegistryName(modid, "magnet"));
-		GameRegistry.register(randomEssence = new BasicItem("randomEssence").setRegistryName(modid, "randomEssence"));
+		GameRegistry.register(randomEssence = new BasicItem("randomEssence"));
 
 		GameRegistry.register(chocolateMilk = new ItemBirthdayChocolateMilk("chocolate_milk").setRegistryName(modid, "chocolate_milk"));
 		GameRegistry.register(chocolateCake = new ItemBirthdayChocolateCake(Blocks.CAKE, "chocolate_cake").setRegistryName(modid, "chocolate_cake"));

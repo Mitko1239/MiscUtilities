@@ -1,0 +1,6 @@
+{
+    "parent": "miscutilities:block/cross",
+    "textures": {
+        "cross": "miscutilities:blocks/flower_rose"
+    }
+}

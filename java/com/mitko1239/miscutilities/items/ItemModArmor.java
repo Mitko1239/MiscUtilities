@@ -3,6 +3,7 @@ package com.mitko1239.miscutilities.items;
 import com.mitko1239.miscutilities.Main;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
@@ -80,7 +81,7 @@ public class ItemModArmor extends ItemArmor {
 							}
 							player.stepHeight = 0.5F;
 						}
-					}else if(player.inventory.armorItemInSlot(2).getItem() != ModItems.tutorialChestplate){
+					}else if(player.inventory.armorItemInSlot(2).getItem() != ModItems.tutorialChestplate || player.inventory.armorItemInSlot(2).getItem() != Items.ELYTRA){
 						if(player.capabilities.allowFlying == true){
 							player.capabilities.allowFlying = false;
 							player.stepHeight = 0.5F;

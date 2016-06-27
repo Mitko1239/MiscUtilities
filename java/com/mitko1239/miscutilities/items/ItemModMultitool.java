@@ -61,7 +61,7 @@ public class ItemModMultitool extends ItemPickaxe {
 			CHEST, PUMPKIN, LIT_PUMPKIN,
 
 			bluestoneOre, randomOre,
-			COLORED_COBBLESTONE, tutorialBlock };
+			COLORED_COBBLESTONE, BLUESTONE };
 	private static Set<Block> effectiveAgainst = new HashSet<>(Arrays.asList(SET_VALUES));
 
 	@Override

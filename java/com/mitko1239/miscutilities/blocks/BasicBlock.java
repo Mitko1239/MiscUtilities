@@ -8,20 +8,25 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 
 public class BasicBlock extends Block {
-	public BasicBlock(String unlocalizedName, Material material, float hardness, float resistance, SoundType stepSound) {
+	public BasicBlock(Material material, float hardness, float resistance, SoundType stepSound, String blockName) {
 		super(material);
-		this.setUnlocalizedName(unlocalizedName);
 		this.setCreativeTab(Main.creativeTab);
 		this.setHardness(hardness);
 		this.setResistance(resistance);
 		this.setSoundType(stepSound);
+		setBlockName(this, blockName);
+	}
+
+	public static void setBlockName(Block block, String blockName) {
+		block.setRegistryName(Main.MODID, blockName);
+		block.setUnlocalizedName(blockName);
 	}
 	
-	public BasicBlock(String unlocalizedName, float hardness, float resistance) {
-		this(unlocalizedName, Material.ROCK, hardness, resistance, SoundType.GLASS);
+	public BasicBlock(float hardness, float resistance, String blockName) {
+		this(Material.ROCK, hardness, resistance, SoundType.GLASS, blockName);
 	}
 	
-	public BasicBlock(String unlocalizedName) {
-		this(unlocalizedName, 2.0f, 10.0f);
+	public BasicBlock(String blockName) {
+		this(2.0f, 10.0f, blockName);
 	}
 }

@@ -1,42 +1,39 @@
 package com.mitko1239.miscutilities.blocks;
 
-import java.util.Comparator;
-import java.util.List;
-import java.util.stream.Stream;
-
 import com.mitko1239.miscutilities.Main;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockBush;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
+import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
-import javax.annotation.Nullable;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Stream;
 
-public class BlockColoredCobblestone extends Block implements IMetaBlockName {
+public class BlockFlower extends BlockBush implements IMetaBlockName {
 
-	@SuppressWarnings("rawtypes")
-	/*public static final PropertyEnum TYPE = PropertyEnum.create("type",
-			BlockColoredCobblestone.EnumType.class);*/
-	public static final IProperty<EnumType> COLOR = PropertyEnum.create("color", EnumType.class);
+	public static final IProperty<EnumType> VARIANT = PropertyEnum.create("variant", EnumType.class);
 
 	@SuppressWarnings("unchecked")
-	public BlockColoredCobblestone(Material material, String blockName) {
+	public BlockFlower(Material material, String blockName) {
 		super(material);
         setBlockName(this, blockName);
-		this.setHardness(2.0F);
-		this.setResistance(10.0F);
+		this.setHardness(0.0F);
+        this.setSoundType(SoundType.PLANT);
         this.setCreativeTab(Main.creativeTab);
 	}
 
@@ -45,41 +42,38 @@ public class BlockColoredCobblestone extends Block implements IMetaBlockName {
         block.setUnlocalizedName(blockName);
     }
 
-//	public BlockColoredCobblestone(String unlocalizedName, float hardness,
-//			float resistance) {
-//		this(unlocalizedName, Material.ROCK, hardness, resistance);
-//	}
-//
-//	public BlockColoredCobblestone(String unlocalizedName) {
-//		this(unlocalizedName, 2.0f, 10.0f);
-//	}
+    @SideOnly(Side.CLIENT)
+    public Block.EnumOffsetType getOffsetType()
+    {
+        return Block.EnumOffsetType.XZ;
+    }
 
+    @SideOnly(Side.CLIENT)
+    public BlockRenderLayer getBlockLayer()
+    {
+        return BlockRenderLayer.CUTOUT;
+    }
 	@Override
 	protected BlockStateContainer createBlockState() {
-		return new BlockStateContainer(this, COLOR);
+		return new BlockStateContainer(this, VARIANT);
 	}
 
 	@SuppressWarnings({"unchecked", "deprecation"})
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
-		return getDefaultState().withProperty(COLOR, EnumType.byMetadata(meta));
+		return getDefaultState().withProperty(VARIANT, EnumType.byMetadata(meta));
 	}
 
 	@SuppressWarnings("unchecked")
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		return state.getValue(COLOR).getMeta();
+		return state.getValue(VARIANT).getMeta();
 	}
 
 	@Override
 	public int damageDropped(IBlockState state) {
 		return getMetaFromState(state);
 	}
-
-//    @Override
-//    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, @Nullable ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
-//        return worldIn.setBlockState(pos, state.cycleProperty(COLOR));
-//    }
 
 	@SuppressWarnings({"unchecked", "rawtypes"})
 	@Override
@@ -90,8 +84,9 @@ public class BlockColoredCobblestone extends Block implements IMetaBlockName {
 	}
 
 	public enum EnumType implements IStringSerializable {
-		WHITE(0, "white"),
-        BLACK(1, "black");
+		ROSE(0, "rose"),
+        PAEONIA(1, "paeonia"),
+		CYAN(2, "cyan");
 
         private static final EnumType[] META_LOOKUP = Stream.of(values()).sorted(Comparator.comparing(EnumType::getMeta)).toArray(EnumType[]::new);
 
@@ -127,8 +122,17 @@ public class BlockColoredCobblestone extends Block implements IMetaBlockName {
 
 	@Override
 	public String getSpecialName(ItemStack stack) {
-		return stack.getItemDamage() == 0 ? "white" : "black";
-	}
+        int i = stack.getItemDamage();
+        if (i == 0) {
+            return "rose";
+        } else if (i == 1) {
+            return "paeonia";
+        } else if (i == 2) {
+            return "cyan";
+        } else {
+            return null;
+        }
+    }
 
 	@Override
 	public ItemStack getPickBlock(RayTraceResult target, World world,

@@ -20,7 +20,7 @@ public final class ItemRenderRegister {
 	}
 
 	public static void registerItemRenderer() {
-		reg(ModItems.bluestone);
+		reg(ModItems.BLUESTONE_DUST);
 		reg(ModItems.magnet);
 		reg(ModItems.randomEssence);
 

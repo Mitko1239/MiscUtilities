@@ -5,13 +5,14 @@ import com.mitko1239.miscutilities.items.ModItems;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModCrafting {
 	public static void initCrafting() {
-		GameRegistry.addRecipe(new ItemStack(ModBlocks.tutorialBlock), "##",
-				"##", '#', ModItems.bluestone);
+		GameRegistry.addRecipe(new ItemStack(ModBlocks.BLUESTONE), "##",
+				"##", '#', ModItems.BLUESTONE_DUST);
 		GameRegistry.addRecipe(new ItemStack(ModItems.magnet), "R L",
 				"I I", "I#I", 'R', Items.REDSTONE, 'L', new ItemStack(Items.DYE, 1, 4), 'I', Items.IRON_INGOT, '#', Items.ENDER_PEARL);
 		GameRegistry.addRecipe(new ItemStack(ModItems.luckyCandy, 2, 0), " # ",
@@ -26,8 +27,13 @@ public class ModCrafting {
 				new ItemStack(Items.DYE, 1, 0));
 		
 		GameRegistry.addShapelessRecipe(
-				new ItemStack(ModItems.bluestone, 4, 0),
-				ModBlocks.tutorialBlock);
+				new ItemStack(ModItems.BLUESTONE_DUST, 4, 0),
+				ModBlocks.BLUESTONE);
+
+
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.DYE, 1, 1), new ItemStack(ModBlocks.FLOWER, 1, 0));
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.DYE, 1, 9), new ItemStack(ModBlocks.FLOWER, 1, 1));
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.DYE, 1, 6), new ItemStack(ModBlocks.FLOWER, 1, 2));
 
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.chocolateMilk, 1), Items.MILK_BUCKET, ModItems.chocolate);
 		GameRegistry.addRecipe(new ItemStack(ModItems.chocolateCake), "###", "SES", "WWW", '#', ModItems.chocolateMilk, 'S', Items.SUGAR, 'E', Items.EGG, 'W', Items.WHEAT);
@@ -35,7 +41,7 @@ public class ModCrafting {
 		// GameRegistry.addSmelting(Items.diamond,
 		// new ItemStack(ModItems.tutorialItem), 1.0F);
 
-        GameRegistry.addSmelting(ModBlocks.bluestoneOre, new ItemStack(ModItems.bluestone, 1), 0.5F);
+        GameRegistry.addSmelting(ModBlocks.bluestoneOre, new ItemStack(ModItems.BLUESTONE_DUST, 1), 0.5F);
         GameRegistry.addSmelting(ModBlocks.randomOre, new ItemStack(ModItems.randomEssence, 1), 0.5F);
 
 		GameRegistry.addRecipe(new ItemStack(ModItems.tutorialAxe), "## ",
